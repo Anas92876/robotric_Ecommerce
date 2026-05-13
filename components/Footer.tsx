@@ -1,4 +1,5 @@
-import { Zap, Github, Twitter, Instagram, Youtube, Mail, MapPin, Phone } from 'lucide-react'
+import Image from 'next/image'
+import { Github, Twitter, Instagram, Youtube, Mail, MapPin, Phone } from 'lucide-react'
 
 const SOCIAL = [
   { Icon: Github, label: 'GitHub' },
@@ -31,17 +32,15 @@ export default function Footer() {
 
           {/* Brand column */}
           <div>
-            <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-8 h-8 bg-[#cccc99] flex items-center justify-center">
-                <Zap className="w-5 h-5 text-[#003300]" />
-              </div>
-              <span className="font-mono text-[#cccc99] text-xl tracking-wider">
-                Robo<span className="text-white">Trick</span>
-              </span>
+            <div className="bg-white inline-block px-3 py-2 mb-5">
+              <Image
+                src="/logo.png"
+                alt="RoboTrick"
+                width={140}
+                height={70}
+                className="h-10 w-auto"
+              />
             </div>
-            <p className="font-mono text-[#cccc99]/30 text-[10px] tracking-[0.3em] uppercase mb-4">
-              Mindset Is Everything
-            </p>
             <p className="font-body text-[#cccc99]/45 text-sm leading-relaxed mb-6">
               Egypt's premier electronics & maker tech store.
               Empowering the next generation of engineers, makers, and innovators.

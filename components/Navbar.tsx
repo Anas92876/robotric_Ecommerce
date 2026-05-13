@@ -1,8 +1,9 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
+import Image from 'next/image'
 import gsap from 'gsap'
-import { ShoppingCart, Menu, X, Zap } from 'lucide-react'
+import { ShoppingCart, Menu, X } from 'lucide-react'
 import { useCart } from './CartContext'
 
 const NAV_LINKS = [
@@ -49,16 +50,19 @@ export default function Navbar() {
           {/* ── Logo ── */}
           <button
             onClick={() => router.push('/')}
-            className="flex items-center gap-2.5 group"
+            className="flex items-center group"
             aria-label="RoboTrick Home"
           >
-            <div className="relative w-8 h-8 bg-[#cccc99] flex items-center justify-center overflow-hidden">
-              <Zap className="w-5 h-5 text-[#003300] group-hover:scale-110 transition-transform" />
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity" />
+            <div className="bg-white px-3 py-1.5 group-hover:bg-white/90 transition-colors duration-200">
+              <Image
+                src="/logo.png"
+                alt="RoboTrick"
+                width={110}
+                height={55}
+                className="h-7 w-auto"
+                priority
+              />
             </div>
-            <span className="font-mono text-[#cccc99] text-xl lg:text-2xl tracking-wider leading-none">
-              Robo<span className="text-white">Trick</span>
-            </span>
           </button>
 
           {/* ── Desktop nav links ── */}
