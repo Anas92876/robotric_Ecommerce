@@ -56,9 +56,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="RoboTrick"
-              width={160}
-              height={80}
-              className="h-11 w-auto"
+              width={220}
+              height={110}
+              className="h-16 w-auto"
               priority
             />
           </button>
