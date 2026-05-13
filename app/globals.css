@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rt-dark: #001a00;
+  --rt-primary: #003300;
+  --rt-surface: #002200;
+  --rt-accent: #cccc99;
+  --rt-border: rgba(204, 204, 153, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--rt-dark);
+  color: white;
+  font-family: var(--font-body), 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--rt-dark); }
+::-webkit-scrollbar-thumb { background: rgba(204, 204, 153, 0.25); }
+::-webkit-scrollbar-thumb:hover { background: rgba(204, 204, 153, 0.5); }
+
+/* Hide scrollbar utility */
+.scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* Grid background pattern */
+.bg-circuit-grid {
+  background-image:
+    linear-gradient(rgba(204, 204, 153, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 204, 153, 0.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-circuit-grid-sm {
+  background-image:
+    linear-gradient(rgba(204, 204, 153, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204, 204, 153, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Glow utilities */
+.glow-text { text-shadow: 0 0 20px rgba(204, 204, 153, 0.4); }
+.glow-border { box-shadow: 0 0 0 1px rgba(204, 204, 153, 0.4), 0 0 20px rgba(204, 204, 153, 0.15); }
+
+/* Transition helper */
+.transition-all-300 { transition: all 0.3s ease; }
