@@ -53,16 +53,14 @@ export default function Navbar() {
             className="flex items-center group"
             aria-label="RoboTrick Home"
           >
-            <div className="bg-white px-3 py-1.5 group-hover:bg-white/90 transition-colors duration-200">
-              <Image
-                src="/logo.png"
-                alt="RoboTrick"
-                width={110}
-                height={55}
-                className="h-7 w-auto"
-                priority
-              />
-            </div>
+            <Image
+              src="/logo.png"
+              alt="RoboTrick"
+              width={160}
+              height={80}
+              className="h-11 w-auto"
+              priority
+            />
           </button>
 
           {/* ── Desktop nav links ── */}
